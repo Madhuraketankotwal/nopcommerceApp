@@ -1,5 +1,6 @@
 import pytest
 import time
+
 from pageObjects.LoginPage import Login
 from pageObjects.AddCustomerPage import AddCustomer
 from utilities.readProperties import ReadConfig
@@ -29,7 +30,6 @@ class Test_003_AddCustomer:
         self.login.clickLogin()
         self.logger.info("***************** Login successfully *********************")
         self.logger.info("***************** starting add customer test *********************")
-
         self.addcust = AddCustomer(self.driver)
         self.addcust.clickOnCustomersMenu()
         self.addcust.clickOnCustomerMenuItem()
